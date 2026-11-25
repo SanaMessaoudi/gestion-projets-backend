@@ -38,7 +38,6 @@ pipeline {
                         echo "$REG_PASS" | docker login -u "$REG_USER" --password-stdin
                         docker tag ${IMAGE_LOCAL} ${IMAGE_REMOTE}
                         docker push ${IMAGE_REMOTE}
-                        docker logout
                     '''
                 }
             }
